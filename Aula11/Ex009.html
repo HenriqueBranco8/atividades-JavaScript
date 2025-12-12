@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidades</title>
+    <style>
+        body{
+            background-color: rgb(99, 82, 61);
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidades</h1>
+    Digite seu país de origem: <input type="text" name="entradanacionalide" id="entradanacionalide">
+    <input type="button" value="verificar" onclick="verificando()">
+    <div id="mostrandoavdd"></div>
+    <script>
+        
+        function verificando(){
+            var entrada_nacinalidade = document.querySelector('input#entradanacionalide')
+            var nacionalidades = String(entrada_nacinalidade.value)
+            var vdd = document.querySelector('div#mostrandoavdd')
+            if(nacionalidades == 'Brasil'){
+                vdd.innerHTML += `Você é <strong>Brasileiro</strong> e nasceu no <strong>${nacionalidades}</strong>`
+            } else {
+                vdd.innerHTML += `Você não é <strong>Brasileiro</strong> e nasceu no <strong>${nacionalidades}</strong>`
+            }
+        }
+    </script>
+</body>
+</html>
