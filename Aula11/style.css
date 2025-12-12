@@ -1,0 +1,28 @@
+body{
+            font: normal 20px Arial; 
+        }
+        h1 {
+            background-color: #02A5E6;
+            color: white;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        p.subtitulo{
+            width: 400px;
+            text-align: center;
+            background-color: #03A5E6;
+            color: white;
+            
+           
+        }
+
+        img.brasil{
+            margin-right: 100px;
+            margin-top: 150px;
+            width: 100px;
+            height: 100px
+        }
+        input#entradanacionalide{
+            margin-top: 400px;
+        }
