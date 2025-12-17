@@ -1,19 +1,34 @@
 function carregar(){
-var guardahoracliente = 15
-var escrevehora = document.querySelector('div#escrevehora')
-var addimgs = document.querySelector('div#imgs')
+var hora = new Date()
+var guardahoracliente = hora.getHours()
+var escrevehora= document.querySelector('div#escrevehora')
+var addimgs = document.getElementById('imagem')
+
+
 if (guardahoracliente < 12 && guardahoracliente >= 6){
     escrevehora.innerHTML = `Agora são ${guardahoracliente} horas da manhã`
-    addimgs.src = `img/manha-redonda-250.png`
+    document.body.style.background = '#ffd88c'
+    addimgs.src = 'img/manha-full.jpg'
+
+
 } else if(guardahoracliente >= 12 && guardahoracliente < 18){
     escrevehora.innerHTML = `Boa Tarde! Agora São ${guardahoracliente} horas`
-    addimgs.src = `img/tarde-redonda-250.png`
-} else if(guardahoracliente >= 18 && guardahoracliente < 23){
+    document.body.style.background = '#d07009'
+    addimgs.src = 'img/tarde-full.jpg'
+
+
+} else if(guardahoracliente >= 18 && guardahoracliente <= 23){
     escrevehora.innerHTML = `Noite Boa! Agora são ${guardahoracliente} horas da noite`
-    addimgs.src = `img/noite-redonda-250.png`
+    document.body.style.background = '#191d78'
+    addimgs.src = `img/noite-full.jpg`
+
+
 } else if(guardahoracliente >= 0 && guardahoracliente < 6){
-    escrevehora.innerHTML = `Vamo dormir campeão já são ${guardahoracliente} da madrugada. Ela não vai te ligar`
-    addimgs.src = `img/madrugada-redonda-250.png`
+    escrevehora.innerHTML = `Vai dormir campeão já são ${guardahoracliente} da madrugada. Ela não vai te ligar`
+    document.body.style.background = '#ac5a11'
+    addimgs.src = `img/madrugada.jpg`
+
+
 }
 
 }   
