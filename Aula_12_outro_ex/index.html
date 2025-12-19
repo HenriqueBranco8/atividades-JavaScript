@@ -13,22 +13,31 @@
 
 
     <section>
-        <div id="txt_1">
-            <p style="margin-top: 30px; position: relative; left: 10px; top: 50px;">Ano de Nascimento:</p> 
-            <input type="number" name="add_idade" id="add_idade">
+        <div style="position: relative; left: 20px;">
+           <p>
+            Ano de nascimento:
+            <input type="number" name="txtano" id="txtano" min="0">
+          </p>
 
-            <p style="margin-top: 30px; position: relative; left: 10px;">Sexo: </p>
-            <input type="radio" name="botton_masculino" id="botton_masculino">
-            <p style="margin-top: -65px; position: relative; left: 90px;">Masculino</p>
+          <p>
+            Sexo:
+            <input type="radio" name="radsex" id="masculino" checked>
+            <label for="masculino">Masculino</label>
 
-            <input type="radio" name="botton_feminino" id="botton_feminino">
-            <p style="margin-top: -65px; position: relative; left: 215px;">Feminino</p>
+            <input type="radio" name="radsex" id="feminino">
+            <label for="feminino">Feminino</label>
 
-            <button style="position: relative; left: 10px;" type="submit">Verificar</button>
+            
+
+          </p>
+
+          <p>
+            <input type="button" value="Verificar" onclick="verificar()">
+          </p>
         </div>
 
-        <div id="msg-js" style="text-align: center;">
-            
+        <div id="res" style="text-align: center;">
+            <p>Adicione as informações para calcular sua idade </p>
         </div>
     </section>
 

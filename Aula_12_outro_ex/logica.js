@@ -1,19 +1,46 @@
-//Essa variável vai ligar o JS com HTML com o input 'Ano de Nascimento'
-var guardaano = document.getElementById('add_idade')
+function verificar(){
 
-//Guarda o valor que o input 'Ano de Nascimento' recebe
-var valorcaixaano = Number(guardaano.value)
+//Essas duas variáveis pegam data atual e guarda a data do usuário
+    var data = new Date()
+    var anoatual = data.getFullYear()
 
-//Vai conectar com a div vazia para escrever no HTML
-var mostraidade = document.getElementById('msg-js')
-mostraidade.innerHTML = ``
+    //Essas variáveis se comunicam com HTML para 
+    var formularioano = document.getElementById('txtano')
+    var res = document.getElementById('res')
 
-//Pega a data do usuário
-var mostraranousuario = new Date()
+// O comando lenght verifica se tem algum valor ou o ano é muito avançado, passando do ano atual. Esse if é para verificar isso. 
+    if (formularioano.value.length == 0 || formularioano.value > anoatual){
+        alert('ERRO! Verifique os dados novamente')
+} else {
+    var fsex = document.getElementsByName('radsex')
+    var idade = anoatual - Number(formularioano.value)
+    var genero = ''
+    var img = document.createElement('img')
+    img.setAttribute('id', 'foto')
+    if(fsex[0].checked){
+        genero = 'Maculino'
+        if(idade >=0 && idade < 12){
+            //criança
+        } else if (idade >= 12 && idade < 18){
+             //adolecente
+        }else if (idade >= 18 && idade < 64){
+            //adulto
+        } else {
+            //idoso
+        }
 
-//Pega o ano do usuário
-var pegaanousuario = mostraranousuario.getFullYear()
-
-//Vai diminuir  
-var diminui
-
+    } else if(fsex[1].checked){
+        genero = 'Feminino'
+        if(idade >=0 && idade < 12){
+            //criança
+        } else if (idade >= 12 && idade < 18){
+             //adolecente
+        }else if (idade >= 18 && idade < 64){
+            //adulto
+        } else {
+            //idoso
+        }
+    }
+    res.innerHTML = `Você tem ${idade} ano e é do gênero ${genero}`
+}
+}
