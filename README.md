@@ -1,2 +1,2 @@
 # Projetos-JavaScript
-Aprendendo JavaScript
+Aprendendo JavaScript e NodeJs para desenvolvimento Web
