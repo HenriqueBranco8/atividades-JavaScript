@@ -1,14 +1,18 @@
 
+
 body{
    font: normal 15pt Arial;
-   background: gray;
+   background: #39D5F5;
 }
+
+
 h1{
     text-align: center;
+    font: normal 100 titulo;
 }
 
 section{
-    background-color: #2a4142;
+    background-color: #8ECAF5;
     width: 700px;
     height: 500px;
     margin: auto;
