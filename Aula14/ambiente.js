@@ -13,8 +13,14 @@ for(var corinthians = 1; corinthians <= 4; corinthians++){
 }
 */
 
-console.log('O Corinthians VAi GANHAR!!')
+/* console.log('O Corinthians VAi GANHAR!!')
 for(corinthians = 1; corinthians <= 4; corinthians++){
     console.log(corinthians)
 }
 console.log('Ganhoooou')
+*/
+
+var corinthians = 1
+for (corinthians =1; corinthians <= 10; corinthians++){
+    console.log(corinthians)
+}
