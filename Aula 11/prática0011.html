@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            font: normal 15pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidades</h1>
+    Digite o pais que você mora: <input type="text" name="pais" id="pais"> <input type="button" value="confirmar" id="confirmar">
+    <div id="resposta"></div>
+        
+    <script>
+        var pais = document.querySelector('#pais')
+        var confirmar = document.querySelector('#confirmar')
+        var res = document.querySelector('#resposta')
+        confirmar.addEventListener('click', verificar)
+
+        function verificar(){
+            if(pais.value.toLowerCase().trim() === 'brasil' || pais.value.toLowerCase().trim() === 'brazil'){
+                res.innerHTML = `Você é Brasileiro e mora no ${pais.value}`
+            } else {
+                res.innerHTML = `Você é estrangeiro `
+                res.innerHTML += `Você é do pais ${pais.value}`
+            }
+        }
+    </script>
+</body>
+</html>
