@@ -12,19 +12,26 @@
     </header>
     <section>
         <div id="mensagem_hora">
-            
+            <p>Oi</p>
         </div>
 
         <div id="img_hora">
-            <img src="imagens/madrugada-redonda.png" alt="">
+            <img src="imagens/dia-1000.jpg" alt="img_dia" id="img_dia">
+            
         </div>
     </section>
     <footer><p>&copy; Site feito por Henrique Branco</p></footer>
 
     <script>
-        var escreve_hora = document.querySelector('#mensagem_hora')
-        var add_img_hora = document.querySelector('#img_hora')
-        escreve_hora.innerHTML = "oi"
+        var pega_hora_usuario = new Date()
+        var hora_usuario = pega_hora_usuario.getHours()
+        
+        escreve_hora.innerHTML = `${hora_usuario}`
+
+        if(hora_usuario >= 6 && hora_usuario < 12){
+            add_img_dia 
+        }
+        
     </script>
 </body>
 </html>
