@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ex001.css">
+</head>
+<body id="corpo">
+    <header>
+        <h1>Horários Valiosos</h1>
+    </header>
+    <section>
+        <div id="mensagem_hora">
+        </div>
+
+        <div id="img_hora">
+
+        </div>
+    </section>
+    <footer><p>&copy; Site feito por Henrique Branco</p></footer>
+
+    <script>
+        var pega_horario_usuario = new Date()
+        var hora_usuario = pega_horario_usuario.getHours()   
+        var body_js = document.querySelector('#corpo')
+        var cria_img = document.createElement('img')
+        var father_cria_img = document.querySelector('#img_hora')
+        var escreve_hora = document.querySelector('#mensagem_hora')
+        escreve_hora.innerHTML = `${hora_usuario}`
+        body_js.style.background = '#2E72BD'
+
+        if(hora_usuario >= 6 && hora_usuario < 12){
+            escreve_hora.innerHTML = `Agora são ${hora_usuario} horas da manhã`
+            cria_img.src = 'imagens/dia-1000.jpg'
+            cria_img.alt = 'imagem da manhã'
+            father_cria_img.appendChild(cria_img)
+            
+            
+        } else if(hora_usuario >= 12 && hora_usuario < 18){
+            escreve_hora.innerHTML = `Agora são ${hora_usuario} horas da tarde`
+            cria_img.src = 'imagens/tarde-full-1000.jpg'
+            cria_img.alt = 'imagem da tarde'
+            father_cria_img.appendChild(cria_img)
+            
+        } else if(hora_usuario >= 18 && hora_usuario <= 23 ){
+            escreve_hora.innerHTML = `Agora são ${hora_usuario} horas da noite`
+            cria_img.src = 'imagens/noite-1000.jpg'
+            cria_img.alt = 'imagem da noite'
+            father_cria_img.appendChild(cria_img)
+            body_js.style.background = '#1F526D'
+
+        } else {
+            escreve_hora.innerHTML = `Agora são ${hora_usuario} horas da madrugada`
+            cria_img.src = 'imagens/madrugada-1000.jpg'
+            cria_img.alt = 'imagem da madrugada'
+            body_js.style.backgroundColor = '#F9744A'
+            father_cria_img.appendChild(cria_img)
+
+            
+        }
+    </script>
+</body>
+</html>

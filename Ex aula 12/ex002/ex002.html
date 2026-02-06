@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <link rel="stylesheet" href="ex002.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Verificador de idade
+        </h1>
+    </header>
+    <section>
+        <div id="inputs_&_msg">
+            <p id="input_nascimento">
+                Ano de Nascimento: <input type="number" name="ano_de_nascimento" id="ano_de_nascimento">
+            </p>
+            <p id="input_button_sexo">
+                sexo: <input type="radio" name="escolha_sexo" id="masculino"> Masculino
+                      <input type="radio" name="escolha_sexo" id="feminino"> Feminino
+            </p>
+            <p id="button_verificar">
+                <input type="button" value="Verificar" id="btn_verifica" onclick="verificar()">
+            </p>
+            <p id="msg_inputs">
+                Preencha os dados acima para ver o resultado!
+            </p>
+
+        </div>
+        
+        <div id="img_pessoas">
+
+        </div>
+
+        
+    </section>
+
+    <footer>
+            <p>&copy; Site feito por Henrique Branco</p>
+    </footer>
+
+    <script>
+        var pega_ano_usuario = new Date()
+        var ano_usuario = pega_ano_usuario.getFullYear()
+        var pega_data_nascimento = document.querySelector('#ano_de_nascimento')
+        var identifica_sexo_feminino = document.querySelector('#feminino')
+        var identifica_sexo_masculino = document.querySelector('#masculino')
+        var escreve_html = document.querySelector('#msg_inputs')
+        var cria_img = document.createElement('img')
+        var div_img_pessoas = document.querySelector('#img_pessoas')
+
+        
+        function verificar(){
+            var pega_data_nascimento_js = Number(pega_data_nascimento.value)
+            var diminui_data_usuario_nascimento = ano_usuario - pega_data_nascimento_js
+            if(diminui_data_usuario_nascimento >= 0 && diminui_data_usuario_nascimento < 12){
+                escreve_html.innerHTML = `Identificamos uma <strong>criança</strong> do sexo #### com <strong>
+                ${diminui_data_usuario_nascimento} anos</strong>`
+
+            } else if(diminui_data_usuario_nascimento >= 12 && diminui_data_usuario_nascimento < 18){
+               escreve_html.innerHTML = `Identificamos um ado`
+            }
+            
+                
+        } 
+
+    </script>
+</body>
+</html>
