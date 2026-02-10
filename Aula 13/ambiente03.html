@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br10">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font: normal 20px arial;
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: rgb(71, 127, 211);
+        }
+        h1{
+            font: normal 20pt arial;
+            color:white;
+            text-align: center;
+        }
+        section{
+            width: 500px;
+            height: 500px;
+            background-color: white;
+            margin: auto;
+            border-radius: 10px;
+        }
+        section > p{
+            padding: 10px
+        }
+        section > input{
+            margin: 0px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio 02</h1>
+    <section>
+        <p>Digite um número: <input type="number" name="entrada" id="entrada"></p>
+        <input type="button" value="verificar" onclick="verificar()">
+        <p><br>Tabuada:</br></p>
+        <p id="res"><br>Adicione um número de 0 à 10</br></p>
+    </section>
+    <script>
+        var d_user = document.querySelector('#entrada')
+        var res = document.querySelector('#res')
+        var tabuada = 0
+        function verificar(){
+            var entrada = Number(d_user.value)
+            var tabuada = 0
+            do{
+                if(entrada < 0){
+                    alert('[ERRO] adicione um número entre 0 à 10')
+                   entrada++
+                } if(entrada > 10){
+                    alert('[ERRO] adicione um número entre 0 à 10')
+                    alert('Levando em consideração o valor "10", vamos te mostrar a tabuada.')
+                    entrada--
+                }
+                
+                }while(entrada < 0)
+
+                while(tabuada >= 0 && tabuada <= 10){
+                    var multi = entrada * tabuada
+                    res.innerHTML += (`${entrada} x ${tabuada} = ${multi} --- `)
+                    tabuada++
+                }
+        }
+        
+    </script>
+</body>
+</html>

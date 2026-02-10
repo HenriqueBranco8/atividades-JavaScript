@@ -47,7 +47,8 @@
     <script>
         var numbers = document.querySelector('#number_digitado')
         var resposta = document.querySelector('#resposta')
-        var soma = contador + contador
+        var soma = 0
+        var qtd = 0
         var contador = 1
         function verificar(){
             if(numbers.value.length == 0){
@@ -58,9 +59,12 @@
                 resposta.innerHTML += `\nVocê andou:`
                 while(contador <= numbers.value){
                     resposta.innerHTML += `\n${contador}\n`
-                    contador++
+                    soma += contador++
+                    qtd++
                     
                 }
+                resposta.innerHTML += `\nQuantidade: ${qtd}\n`
+                resposta.innerHTML += `\nSoma: ${soma}\n`
                
                 
             
