@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font: normal 20px arial;
+        }
+        body{
+            background-color: rgb(71, 127, 211);
+        }
+        h1{
+            font: normal 20pt arial;
+            color:white;
+            text-align: center;
+        }
+        section{
+            width: 500px;
+            height: 500px;
+            background-color: white;
+            margin: auto;
+            border-radius: 10px;
+        }
+        section > p {
+            padding: 20px;
+        }
+        section > div{
+            padding: 20px;
+        }
+        #verificar{
+            margin: 0px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio 01</h1>
+    <section>
+        <p>Digite um número <input type="number" name="number_digitado" id="number_digitado" min="1"></p>
+        <input type="button" value="Verificar" onclick="verificar()" id="verificar">
+        <div id="resposta">
+            
+        </div>
+    </section>
+    <script>
+        var numbers = document.querySelector('#number_digitado')
+        var resposta = document.querySelector('#resposta')
+        var soma = contador + contador
+        var contador = 1
+        function verificar(){
+            if(numbers.value.length == 0){
+                alert('[ERRO] Digite pelo menos um número maior ou igual à 1 (um)')
+            } else{
+                resposta.innerHTML = `\nVocê digitou o número: ${numbers.value}\n`
+
+                resposta.innerHTML += `\nVocê andou:`
+                while(contador <= numbers.value){
+                    resposta.innerHTML += `\n${contador}\n`
+                    contador++
+                    
+                }
+               
+                
+            
+            }
+        }
+    </script>
+</body>
+</html>
