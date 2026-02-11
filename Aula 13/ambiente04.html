@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio03</title>
+    <style>
+        *{
+                box-sizing: border-box;
+                font: normal 20px arial;
+                padding: 0px;
+                margin: 0px;
+            }
+            body{
+                background-color: rgb(71, 127, 211);
+            }
+            h1{
+                font: normal 20pt arial;
+                color:white;
+                text-align: center;
+                margin-top: 30px;
+                padding: 30px;
+            }
+            section{
+                width: 500px;
+                background-color: white;
+                margin: auto;
+                border-radius: 10px;
+            }
+            section > p{
+                padding: 10px
+            }
+            section > div{
+                padding: 10px
+            }
+            section > input{
+                margin: 0px 10px;
+            }
+    </style>
+</head>
+<body>
+    <h1>Desasfio 03</h1>
+    <section>
+        <p>Digite um número: <input type="number" name="number_entrada" id="number_entrada"> </p>
+        <input type="button" value="Tente Explodir" onclick="explosao()">
+        <div id="res">
+        
+        </div>
+        <div id="father">
+
+        </div>
+    </section>
+    <script>
+        var number_entrada = document.querySelector('#number_entrada')
+        var res = document.querySelector('#res')
+        var img = document.createElement('img')
+        var father_img = document.querySelector('#father')
+        var soma = 0
+        var qtd = 0
+        
+        function explosao(){
+            var number = parseInt(number_entrada.value)
+            
+            do{
+                    if(number == 0){
+                        res.innerHTML = 'EXPLODIU'
+                        document.body.style.backgroundColor = "red"
+
+                        //configurações img
+                        img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh4K_TQN9ohd4QoIP0-Ccv2PN2MDKAHyjkjg&s'
+                        img.alt = 'imagem-explosão'
+                        father_img.appendChild(img) 
+
+                        //Styles
+                        img.style.width = '400px'
+                        img.style.margin = '0px 40px'
+                        res.style.textAlign = 'center'
+
+                        //para recarregar a página em 5 segundos
+                        setTimeout(function(){
+                            location.reload(); 
+                            }, 5000);
+                        number++
+                    }
+            }while(number == 0)
+            
+
+            
+        }
+    </script>
+</body>
+</html>

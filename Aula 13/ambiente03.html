@@ -21,7 +21,7 @@
         }
         section{
             width: 500px;
-            height: 500px;
+    
             background-color: white;
             margin: auto;
             border-radius: 10px;
@@ -51,20 +51,22 @@
             var tabuada = 0
             do{
                 if(entrada < 0){
-                    alert('[ERRO] adicione um número entre 0 à 10')
-                   entrada++
+                   alert('[ERRO] adicione um número entre 0 à 10')
+                   alert('Levando o número mais perto, "0"(zero).Vamos te mostrar a tabuada. ')
+                   var entrada = 0
                 } if(entrada > 10){
                     alert('[ERRO] adicione um número entre 0 à 10')
-                    alert('Levando em consideração o valor "10", vamos te mostrar a tabuada.')
-                    entrada--
+                    alert('Levando em consideração o valor mais próximo de 0 à 10, vamos te mostrar a tabuada do "10".')
+                    var entrada = 10
                 }
                 
                 }while(entrada < 0)
 
                 while(tabuada >= 0 && tabuada <= 10){
                     var multi = entrada * tabuada
-                    res.innerHTML += (`${entrada} x ${tabuada} = ${multi} --- `)
+                    res.innerHTML += (`<br>${entrada} x ${tabuada} = ${multi} </br> `)
                     tabuada++
+                    
                 }
         }
         
