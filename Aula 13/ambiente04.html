@@ -57,35 +57,47 @@
         var father_img = document.querySelector('#father')
         var soma = 0
         var qtd = 0
+        var media = 0
+        
         
         function explosao(){
             var number = parseInt(number_entrada.value)
-            
+           
             do{
+               
+               
                     if(number == 0){
-                        res.innerHTML = 'EXPLODIU'
-                        document.body.style.backgroundColor = "red"
-
+                        //Resultados para aparecer escrito no HTML
+                        res.innerHTML = '<br>EXPLODIU</br>'
+                        res.innerHTML += `<br>Soma: ${soma}</br>`
+                        res.innerHTML += `<br>Quantidade: ${qtd}</br>`
+                        res.innerHTML += `<br>Media: ${media}</br>`
+                
                         //configurações img
                         img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh4K_TQN9ohd4QoIP0-Ccv2PN2MDKAHyjkjg&s'
                         img.alt = 'imagem-explosão'
                         father_img.appendChild(img) 
 
                         //Styles
+                        document.body.style.backgroundColor = "red"
                         img.style.width = '400px'
                         img.style.margin = '0px 40px'
+                        img.style.borderRadius = '10px'
                         res.style.textAlign = 'center'
 
                         //para recarregar a página em 5 segundos
-                        setTimeout(function(){
-                            location.reload(); 
-                            }, 5000);
-                        number++
-                    }
-            }while(number == 0)
-            
+                        
 
+                        
+                    }
+                
+                soma += number
+                qtd++
+                media = soma / qtd
+                number++
+            }while(number == 0)  
             
+   
         }
     </script>
 </body>
