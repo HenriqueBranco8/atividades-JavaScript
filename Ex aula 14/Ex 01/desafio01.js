@@ -14,22 +14,21 @@ function conta(){
 
     //Se todos os inputs não tiver número, vai aparecer essa mensagem.
     if(Inicio.value.length == 0 && Fim.value.length == 0 && Passo.value.length == 0){
-        res.innerHTML = 'Coloque algum número nas caixas de entrada'
-
+        res.innerHTML = 'Não à problema em ser vazio, porém sem algo que nos mova, nem um motivo de partida o fim nunca chegará,'
+        
 
     //Se o input 'Inicio' não conter número, vai aparecer esse mensagem.
     } else if(Inicio.value.length == 0){
-        alert('Você não adicionou nada no "Inicio". Por favor, adicione algo.')
-
+        alert('Não encontramos um inicio, então nunca chegaremos ao resultado final...')
 
     //Se o input 'Fim' não conter níumero, vai aparecer essa mensagem.
     }else if(Fim.value.length == 0){
-        alert('Você não adicionou nenhum número no "Fim", então vamos levar em consideração o valor 0(zero)')
+        alert('Você se encontrou mas se não almejar algo para o final, nunca vencerá...')
 
 
     //Se o input 'Passo' não conter número, vai aprecer essa mensagem.
     } else if(Passo.value.length == 0){
-        res.innerHTML = 'Você não adicionou nada na caixa de "Passo". Não tem como você se mover sem dar nenhum passo!'
+        res.innerHTML = 'Cada passo rumo à vitória é importante. Não pule a etapa de andar.'
 
 
     //Se o fim for maior que o inicio, vai aparecer uma ordem crescente do inicio ao fim.    
@@ -47,6 +46,8 @@ function conta(){
             res.innerHTML += `${inicio} 👉 `
         }
         res.innerHTML += `🏁`
+    } else if(passo > fim, inicio){
+        alert('Nossos passos não podem ser maiores do que a força que nos move para sair do inicio, nem maiores que fim que nôs aguarda. Não á chance de pular o Inicio e o Final! ')
     }
     
     
