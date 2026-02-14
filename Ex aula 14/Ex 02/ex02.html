@@ -9,14 +9,15 @@
 <body>
     <h1>Vamos Contar</h1>
     <section>
-        <div>
+        <div id="inline">
             <p>Digite um número: <input type="number" name="number_tabuada" id="number_tabuada"></p>
-            <table id="tabuada">
-                
-            </table>    
+            <p><input type="button" value="Gerar Tabuada" id="gerar_tabuada" onclick="gerar()"></p>
         </div>
         <div id="res">
-            
+            <select name="select_tabuada" id="select_tabuada">
+                <option value="tabuada" id="tabuada"></option>
+                
+            </select>  
         </div>
         
     </section>

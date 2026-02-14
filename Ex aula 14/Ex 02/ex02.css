@@ -19,3 +19,12 @@ h1, footer{
     text-align: center;
     padding: 20px;
 }
+div#inline{
+    display: flex;
+}
+input#gerar_tabuada{
+    margin-left: 10px;
+}
+#number_tabuada{
+    margin-left: 5px;
+}
