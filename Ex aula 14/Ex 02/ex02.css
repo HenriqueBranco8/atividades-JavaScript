@@ -21,10 +21,16 @@ h1, footer{
 }
 div#inline{
     display: flex;
+    justify-content: center;
 }
 input#gerar_tabuada{
     margin-left: 10px;
 }
 #number_tabuada{
     margin-left: 5px;
+}
+#res{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 0px 0px;
 }
