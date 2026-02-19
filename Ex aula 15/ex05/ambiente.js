@@ -6,7 +6,7 @@ var pedidos = [
 ]
 
 var totalGeral = 0
-var maiorPedido = pedidos
+var maiorPedido = pedidos[0]
 
 for (let pedido of pedidos) {
 
@@ -16,6 +16,7 @@ for (let pedido of pedidos) {
 
     totalGeral += pedido.total
 }
+
 
 
 var media = totalGeral / pedidos.length
