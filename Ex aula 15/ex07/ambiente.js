@@ -27,8 +27,7 @@ for(let i of alunos){
 
     //Calcula as notas dos alunos
     for(let x of nota){
-        acumula += x
-        soma = acumula
+        soma += x
     }
 
 
