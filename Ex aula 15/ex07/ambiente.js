@@ -20,29 +20,26 @@ for(let i of alunos){
 
     //Variáveis que voltam ao zero
     var soma = 0
-
     //Variáveis que contem o elemento dentro do vetor
     nota = i.notas
     nomes = i.nome
     quantidade = i.notas.length
     quantidade_final += i.notas.length
-
+    
     //Calcula as notas dos alunos
-    for(let x of nota){
+    for(let x of nota){ 
         todas_notas += x // Pega a nota de todo mundo e soma
-        media_geral = todas_notas / quantidade_final //Media da turma completa
-
-
         soma += x  
-        media = soma / quantidade //Media indivudial de cada aluno
-        
+    }
 
-        //motrar a maior média de notas e o nome da pessoa com a maior média
+    media_geral = todas_notas / quantidade_final //Media da turma completa
+    media = soma / quantidade //Media indivudial de cada aluno
+
+    //motrar a maior média de notas e o nome da pessoa com a maior média
         if(media > maior){
             maior = media
             maior_nome = i.nome
         }
-    }
 
     //Se à media for maior ou igual à 7(sete) aparece a mensagem de aprovado
     if(media >= 7){
@@ -50,10 +47,9 @@ for(let i of alunos){
     } 
     
     //Se à media for meno que 7(sete) aparece a mensagem de reprovado
-    else {
+    else{
         console.log(`Nome: ${nomes} || Notas: ${nota} || Nota total: ${soma} || Média: ${media.toFixed(1)} || REPROVADO`)
     }
-
     
 }
 //Média geral da turma
