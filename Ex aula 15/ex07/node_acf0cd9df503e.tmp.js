@@ -31,7 +31,7 @@ for(let i of alunos){
         todas_notas += i// Pega a nota de todo mundo e soma
         soma += i
         if(i.length === undefined){
-            nota = nota.unshift(0)
+            nota.unshift(0)
         }
     }
 
